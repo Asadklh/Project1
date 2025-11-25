@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enterno Oud and Scents</title>
+  <link rel="icon" type="image/x-icon" href="fnllogo.jpg">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- FontAwesome (for toggle icon) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="fnllogo.jpg" alt="Enterno Ouds and Scents Logo">
+      <span>Enterno Ouds & Scents</span>
+    </div>
+    <div class="menu-toggle">&#9776;</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Fresh & Cool</a></li>
+      <li><a href="Signature Attars.html">Signature Attars</a></li>
+      <li><a href="lONG lasting Sweet Scents.html">Long Lasting Sweet Scents</a></li>
+      <li><a href="Luxury Imports.html">Luxury Imports</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+<!-- Carousel -->
+<div class="carousel-container">
+  <div class="carousel">
+    <div class="slide"><img src="44.jpg" alt="Perfume 1"></div>
+    <div class="slide"><img src="45.jpg" alt="Perfume 2"></div>
+    <div class="slide"><img src="44.jpg" alt="Perfume 3"></div>
+  </div>
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+  <div class="dots"></div>
+</div>
+
+
+<!-- Gallery Heading -->
+<h2 class="heading">✨ Our Premium Perfume Collection ✨</h2>
+
+<!-- Product Gallery -->
+<div class="gallery" id="gallery"></div>
+
+<!-- Cart Icon -->
+<div class="cart-icon" onclick="toggleCart()">🛒</div>
+
+<!-- Cart -->
+<div class="cart" id="cart">
+  <h3>🛒 Your Cart</h3>
+  <div id="cart-items"></div>
+  <div class="total">Total: Rs <span id="total">0</span></div>
+  <button class="btn order-btn" onclick="openPayment()">Order Now</button>
+  <button class="btn cancel-btn" onclick="closeCart()">Close Cart</button>
+</div>
+
+<!-- Product Detail Modal -->
+<div class="modal" id="productModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeProductModal()">&times;</span>
+    <img id="modal-img" width="100%" style="border-radius:10px;">
+    <h3 id="modal-title"></h3>
+    <p id="modal-price"></p>
+    <button class="btn" id="modal-add">Add to Cart</button>
+  </div>
+</div>
+
+<!-- Payment Form Modal -->
+<div class="modal" id="paymentModal">
+  <div class="modal-content">
+    <span class="close" onclick="closePayment()">&times;</span>
+    <h3>💳 Payment Form</h3>
+    <form id="paymentForm">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Address" required>
+      <input type="number" placeholder="Card Number" required>
+      <input type="month" required>
+      <input type="number" placeholder="CVV" required>
+      <button type="submit" class="btn">Pay Now</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About -->
+    <div class="footer-col">
+      <h4>About Us</h4>
+      <p>We bring you the finest collection of Attars and Perfumes crafted with love and tradition. Our goal is to make you smell beautiful, every day.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Perfumes</a></li>
+        <li><a href="#">Special Deals</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Email: support@perfumehub.com</p>
+      <p>Phone: +92 300 1234567</p>
+      <p>Address: Lahore, Pakistan</p>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 PerfumeHub | All Rights Reserved</p>
+  </div>
+</footer>
+
+
+<!-- JS -->
+<script src="script.js"></script>
+</body>
+</html>
